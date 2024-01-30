@@ -79,18 +79,13 @@ export const getLocalStorageArray = (key: string): IScore[] => {
   try {
     return JSON.parse(localStorage.getItem(key) ?? '[]');
   } catch (error) {
-    console.error(`Failed to get ${key} from localStorage:`, error);
     return [];
   }
 };
 
 // Impure function
 export const setLocalStorageArray = (key: string, array: IScore[]): void => {
-  try {
-    localStorage.setItem(key, JSON.stringify(array));
-  } catch (error) {
-    console.error(`Failed to set ${key} to localStorage:`, error);
-  }
+  localStorage.setItem(key, JSON.stringify(array));
 };
 
 // Impure function

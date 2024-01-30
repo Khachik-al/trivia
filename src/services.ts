@@ -13,7 +13,6 @@ export const getCategories = async <T extends string = string>(): Promise<
       throw new Error("API response doesn't contain trivia_categories");
     }
   } catch (error) {
-    console.error(error);
     throw error;
   }
 };
@@ -36,7 +35,6 @@ export const getQuestions = async ({
       throw new Error("API response doesn't contain results");
     }
   } catch (error) {
-    console.error(error);
     throw error;
   }
 };
